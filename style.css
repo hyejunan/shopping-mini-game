@@ -29,6 +29,11 @@ button {
   border: 1px solid #3f454d;
   text-decoration: none;
   border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  transform: scale(1.1);
 }
 
 img, button{
@@ -60,6 +65,11 @@ img, button{
 .filter img {
   width: 30px;
   height: 30px;
+  cursor: pointer;
+}
+
+.filter img:hover {
+  transform: scale(1.1);
 }
 
 .list {
