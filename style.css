@@ -99,3 +99,7 @@ li {
   margin-bottom: 5px;
 }
 
+li:hover{
+  transform: scale(1.05);
+}
+
