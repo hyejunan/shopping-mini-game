@@ -72,7 +72,7 @@ img, button{
   transform: scale(1.1);
 }
 
-.list {
+.list-section {
   margin: auto;
   width: 280px;
 }
@@ -96,5 +96,6 @@ li {
   padding: 5px 0;
   border-radius: 4px;
   line-height: 30px;
+  margin-bottom: 5px;
 }
 
