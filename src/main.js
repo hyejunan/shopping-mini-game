@@ -19,6 +19,7 @@ class Item {
 }
 
 function addListItem(i) {
+    
     const li = document.createElement('li');
     const img = document.createElement('img');
     const text = document.createTextNode(`${i.gender}, ${i.size} size`);
@@ -49,6 +50,38 @@ function start() {
         addListItem(arr[i]);
     }
 }
+
+function filtorColor(color) {
+    const result = arr.filter(a => a.color === color);
+    list.innerHTML = '';
+    for(let i =0;i<result.length;i++) {
+        addListItem(result[i]);
+    }
+}
+
+filter.addEventListener('click', (e) => {
+    const name = e.target;
+    console.log(name.classList.value);
+    switch (name.classList.value) {
+        case 'img.blue.tshirt':
+            break;
+        case 'img.blue.pant':
+            break;
+        case 'img.blue.skirt':
+            break;
+        case 'blueBtn':
+            filtorColor('blue');
+            break;
+        case 'yellowBtn':
+            filtorColor('yellow');
+            break;
+        case 'pinkBtn':
+            filtorColor('pink');
+            break;
+        default:
+            break;
+    };
+})
 
 start();
 
