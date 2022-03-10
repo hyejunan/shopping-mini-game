@@ -51,36 +51,47 @@ function start() {
     }
 }
 
+function filtorType(type) {
+    console.log('type : ', type);
+    const result = arr.filter(a => a.type === type);
+    return result;
+}
+
 function filtorColor(color) {
     const result = arr.filter(a => a.color === color);
-    list.innerHTML = '';
-    for(let i =0;i<result.length;i++) {
-        addListItem(result[i]);
-    }
+    return result;
 }
 
 filter.addEventListener('click', (e) => {
-    const name = e.target;
+    let res = [];
+    let name = e.target;
     console.log(name.classList.value);
     switch (name.classList.value) {
-        case 'img.blue.tshirt':
+        case 'blue tshirt':
+            res = filtorType('tshirt');
             break;
-        case 'img.blue.pant':
+        case 'blue pant':
+            res = filtorType('pant');
             break;
-        case 'img.blue.skirt':
+        case 'blue skirt':
+            res = filtorType('skirt');
             break;
         case 'blueBtn':
-            filtorColor('blue');
+            res = filtorColor('blue');
             break;
         case 'yellowBtn':
-            filtorColor('yellow');
+            res = filtorColor('yellow');
             break;
         case 'pinkBtn':
-            filtorColor('pink');
+            res = filtorColor('pink');
             break;
         default:
             break;
     };
+    list.innerHTML = '';
+    for(let i =0;i<res.length;i++) {
+        addListItem(res[i]);
+    }
 })
 
 start();
