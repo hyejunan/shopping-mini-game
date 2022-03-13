@@ -4,13 +4,14 @@
 
 // Fetch the items from the JSON file
 function loadItems() {
-    return fetch('file:data/data.json').then(response => response.json())
-    .then(json => console(json));
+    return fetch('data/data.json').then(response => response.json())
+    .then(json => json.items);
 }
 
 // main
 loadItems()
 .then(items => {
+    console.log(items);
     // displayItems(items);
     // setEventListners(items);
 })
