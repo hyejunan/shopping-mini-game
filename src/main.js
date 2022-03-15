@@ -22,11 +22,18 @@ function createHTMLString(item) {
     `
 }
 
+function setEventListners(items) {
+    const logo = document.querySelector('.logo');
+    const buttons = document.querySelector('buttons');
+    logo.addEventListener('click', () => displayItems(items));
+    buttons.addEventListener('click', event => onButtonClick(event, items));
+}
+
 // main
 loadItems()
 .then(items => {
     console.log(items);
-    // displayItems(items);
-    // setEventListners(items);
+    displayItems(items);
+    setEventListners(items);
 })
 .catch(console.log)
