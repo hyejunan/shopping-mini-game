@@ -22,7 +22,7 @@ function createHTMLString(item) {
     `
 }
 
-function setEventListners(items) {
+function setEventListeners(items) {
     const logo = document.querySelector('.logo');
     const buttons = document.querySelector('buttons');
     logo.addEventListener('click', () => displayItems(items));
@@ -34,6 +34,6 @@ loadItems()
 .then(items => {
     console.log(items);
     displayItems(items);
-    setEventListners(items);
+    setEventListeners(items);
 })
 .catch(console.log)
