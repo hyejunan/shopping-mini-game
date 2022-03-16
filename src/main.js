@@ -22,6 +22,10 @@ function createHTMLString(item) {
     `
 }
 
+function onButtonClick(event, items) {
+    
+}
+
 function setEventListeners(items) {
     const logo = document.querySelector('.logo');
     const buttons = document.querySelector('buttons');
