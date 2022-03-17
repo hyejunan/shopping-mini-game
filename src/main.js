@@ -1,7 +1,8 @@
 'use strict'
 // one variable one line
 // try to use String template
-// Array 
+// Array
+// DRY
 
 
 // Fetch the items from the JSON file
