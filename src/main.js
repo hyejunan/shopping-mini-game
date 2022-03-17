@@ -2,7 +2,7 @@
 // one variable one line
 // try to use String template
 // Array
-// DRY
+// DRY Don't repeat yourself!!!!
 
 
 // Fetch the items from the JSON file
